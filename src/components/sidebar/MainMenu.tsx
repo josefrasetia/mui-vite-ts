@@ -116,29 +116,25 @@ const MainMenu = (props: {
             <ListItemButton
               key={item.name}
               sx={{
-                pl: (paddingLevel === 0) ? (openCollapse.indexOf(item.key) > -1) ? 3 - 0.5 : 3 : paddingLevel,
+                pl:
+                  paddingLevel === 0
+                    ? openCollapse.indexOf(item.key) > -1
+                      ? 3 - 0.5
+                      : 3
+                    : paddingLevel,
                 borderTopRightRadius: 50,
                 borderBottomRightRadius: 50,
-                borderLeft:
-                  openCollapse.indexOf(item.key) > -1 ? "4px solid" : "",
-                borderColor:
-                  openCollapse.indexOf(item.key) > -1
-                    ? theme.palette.primary.main
-                    : "transparent",
-                backgroundColor:
-                  item.linkParent == document.location.pathname
-                    ? theme.palette.primary.light
-                    : "inherit",
-                color:
-                  item.linkParent == document.location.pathname
-                    ? theme.palette.primary.dark
-                    : "inherit",
-                "&:hover": {
-                  backgroundColor:
-                    item.linkParent == document.location.pathname
-                      ? theme.palette.primary.light
-                      : "default",
-                },
+                ...(openCollapse.indexOf(item.key) > -1 && {
+                  borderLeft: "4px solid",
+                  borderColor: theme.palette.primary.main,
+                }),
+                ...(item.linkParent == document.location.pathname && {
+                  backgroundColor: theme.palette.primary.light,
+                  color: theme.palette.primary.dark,
+                  "&:hover": {
+                    backgroundColor: theme.palette.primary.light,
+                  },
+                }),
               }}
               to={item.linkParent ? item.linkParent : null}
               component={item.linkParent ? NavLink : "div"}
@@ -155,7 +151,8 @@ const MainMenu = (props: {
                     minWidth: theme.spacing(4),
                     fontSize: 20,
                     color:
-                      openCollapse.indexOf(item.key) > -1 || document.location.pathname === item.linkParent
+                      openCollapse.indexOf(item.key) > -1 ||
+                      document.location.pathname === item.linkParent
                         ? theme.palette.primary.main
                         : "default",
                   }}
@@ -223,24 +220,14 @@ const MainMenu = (props: {
           key={index.toString()}
           sx={{
             pl: 0,
-            color:
-              openCollapse.indexOf(item.key) > -1
-                ? theme.palette.primary.dark
-                : "inherit",
-            backgroundColor:
-              openCollapse.indexOf(item.key) > -1
-                ? theme.palette.primary.light
-                : "inherit",
-            "&:hover": {
-              color:
-                openCollapse.indexOf(item.key) > -1
-                  ? theme.palette.primary.dark
-                  : "inherit",
-              backgroundColor:
-                openCollapse.indexOf(item.key) > -1
-                  ? theme.palette.primary.light
-                  : "default",
-            },
+            ...(openCollapse.indexOf(item.key) > -1 && {
+              color: theme.palette.primary.dark,
+              backgroundColor: theme.palette.primary.light,
+              "&:hover": {
+                color: theme.palette.primary.dark,
+                backgroundColor: theme.palette.primary.light,
+              },
+            }),
             borderTopRightRadius: 50,
             borderBottomRightRadius: 50,
           }}
