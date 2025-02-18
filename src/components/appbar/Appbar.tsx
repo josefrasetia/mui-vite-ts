@@ -72,7 +72,7 @@ const AppBarContent = (props: AppBarContentProps) => {
     <AppBar
       position="fixed"
       sx={{
-        backgroundColor: theme.palette.background.paper,
+        backgroundColor: theme.palette.primary.main,
         zIndex: theme.zIndex.drawer + 1,
         transition: theme.transitions.create(["width", "margin"], {
           easing: theme.transitions.easing.sharp,
@@ -101,7 +101,7 @@ const AppBarContent = (props: AppBarContentProps) => {
             mr: 2,
             color: theme.palette.primary.main,
             borderRadius: "50%",
-              boxShadow: theme.shadows[2],
+              boxShadow: theme.shadows[5],
               position: open ? "absolute" : "relative",
               left: open ? -10 : 0,
               backgroundColor: theme.palette.background.paper,
@@ -116,13 +116,13 @@ const AppBarContent = (props: AppBarContentProps) => {
         <Typography
           variant="h6"
           noWrap
-          sx={{ flexGrow: 1, color: "text.primary" }}
+          sx={{ flexGrow: 1, color: "#fff", ml: 2, fontWeight: 'bold'}}
         >
           Dashboard
         </Typography>
         <Grid container spacing={2}>
-          <IconButton aria-label="show 17 new notifications">
-            <Badge badgeContent={17} color="primary">
+          <IconButton aria-label="show 17 new notifications" sx={{ color: "#fff" }}>
+            <Badge badgeContent={17} color="error">
               <IonIcon name="notifications-outline" size="medium" />
             </Badge>
           </IconButton>
