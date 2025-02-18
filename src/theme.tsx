@@ -90,6 +90,13 @@ const theme = createTheme({
         },
       },
     },
+    MuiChip: {
+      styleOverrides: {
+        colorPrimary: {
+          color: "#fff",
+        },
+      },
+    },
   },
   breakpoints: {
     values: {
