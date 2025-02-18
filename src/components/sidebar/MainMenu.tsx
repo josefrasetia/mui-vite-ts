@@ -155,7 +155,7 @@ const MainMenu = (props: {
                     minWidth: theme.spacing(4),
                     fontSize: 20,
                     color:
-                      openCollapse.indexOf(item.key) > -1
+                      openCollapse.indexOf(item.key) > -1 || document.location.pathname === item.linkParent
                         ? theme.palette.primary.main
                         : "default",
                   }}
