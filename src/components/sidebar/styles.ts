@@ -5,6 +5,7 @@ const styles = (theme: Theme) => ({
     height: 120,
     width: "100%",
     display: "flex",
+    pt: 1,
     fontSize: 14,
     flexDirection: "column",
     textAlign: "center",
