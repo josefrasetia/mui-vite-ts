@@ -210,6 +210,8 @@ const MainMenu = (props: {
               fontSize: "12px",
               fontWeight: "bold",
               color: theme.palette.secondary.main,
+              lineHeight: "30px",
+              mt: index > 0 ? 2 : 0,
             }}
           >
             {item.name}
