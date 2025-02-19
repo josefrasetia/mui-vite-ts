@@ -17,7 +17,7 @@ const dataMenu: MenuItem[] = [
     key: "home",
     name: "Home",
     icon: "home-outline",
-    linkParent: "/",
+    linkParent: "/app",
   },
   {
     key: "apps",

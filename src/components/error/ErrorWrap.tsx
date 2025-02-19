@@ -21,7 +21,7 @@ const ErrorWrap = ({ title, desc }: ErrorWrapProps) => {
         color="primary"
         sx={styles.button}
         component={Link}
-        to="/"
+        to="/app"
       >
         Go To Dashboard
       </Button>
