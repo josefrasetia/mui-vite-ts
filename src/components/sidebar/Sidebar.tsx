@@ -74,7 +74,7 @@ const Sidebar: React.FC<SidebarProps> = (props) => {
           }}
         >
           <NavLink
-            to="/"
+            to="/app"
             style={{ textDecoration: "none", color: "inherit", width: "100%" }}
           >
             <Typography variant="h6" sx={{ flexGrow: 1, textAlign: "center" }}>

@@ -102,8 +102,8 @@ const AppBarContent = (props: AppBarContentProps) => {
             color: theme.palette.primary.main,
             borderRadius: "50%",
               boxShadow: theme.shadows[5],
-              position: open ? "absolute" : "relative",
-              left: open ? -10 : 0,
+              position: open && !isMobile ? "absolute" : "relative",
+              left: open && !isMobile ? -10 : 0,
               backgroundColor: theme.palette.background.paper,
               zIndex: 1,
               "&:hover": {

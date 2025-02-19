@@ -100,7 +100,7 @@ const MainMenu = (props: {
   // set open collapse menu when route change and refresh
   useEffect(() => {
     const openCollapse = setNavCollapse(dataMenu, location.pathname);
-    if (!open) {
+    if (!open && !hover) {
       setOpenCollapse([]);
       setPreviousExpandedCollapse(openCollapse);
     } else {

@@ -11,28 +11,28 @@ const Dashboard = () => {
   return (
     <>
       <Grid container spacing={2} sx={{ mb: 2 }}>
-        <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+        <Grid size={{ xs: 6, sm: 6, md: 3 }}>
           <StatsCard
             title="Total Users"
             value="2,300"
             icon={<PeopleIcon fontSize="large" />}
           />
         </Grid>
-        <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+        <Grid size={{ xs: 6, sm: 6, md: 3 }}>
           <StatsCard
             title="Total Orders"
             value="1,520"
             icon={<ShoppingCartIcon fontSize="large" />}
           />
         </Grid>
-        <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+        <Grid size={{ xs: 6, sm: 6, md: 3 }}>
           <StatsCard
             title="Revenue"
             value="$45,000"
             icon={<BarChartIcon fontSize="large" />}
           />
         </Grid>
-        <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+        <Grid size={{ xs: 6, sm: 6, md: 3 }}>
           <StatsCard
             title="Growth"
             value="+25%"
