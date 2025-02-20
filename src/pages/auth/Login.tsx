@@ -68,8 +68,8 @@ const Login = () => {
       }}
     >
       <Container maxWidth="sm">
-        <StyledPaper elevation={10}>
-          <img src="/img/logo-ib.png" alt="logo" height={70} />
+        <StyledPaper>
+          <img src="/assets/img/logo-ib.png" alt="logo" height={70} />
           <Typography
             variant="body1"
             color="text.secondary"
@@ -148,9 +148,10 @@ const Login = () => {
                 mt: 3,
                 mb: 2,
                 py: 1.5,
-                backgroundColor: "#1976d2",
+                borderRadius: "10px",
+                backgroundColor: theme.palette.primary.dark,
                 "&:hover": {
-                  backgroundColor: "#1565c0",
+                  backgroundColor: theme.palette.primary.main,
                 },
               }}
             >
